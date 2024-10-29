@@ -1,0 +1,219 @@
+body{
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;  /* Font to use */
+    background-color:#E2EBED;
+}
+/* Font: The body text is set to use Trebuchet MS as the primary font, and if it's unavailable, it falls back to Lucida Sans Unicode, then Arial, and finally any sans-serif font.
+Background Color: The body has a light blue-gray color (#E2EBED). */
+
+#footer{
+    height:30px;
+    vertical-align:middle;
+    text-align:right;
+    clear:both;
+    padding-right:3px;
+    background-color:#317082;
+    margin-top:2px;
+    width:790px;
+}
+#footer form{
+    margin:0px;
+    margin-top:2px;
+}
+/* Dimensions: The footer is given a height of 30px, a width of 790px, and a margin-top of 2px to add a small gap from the element above.
+Text Alignment: The text is aligned to the right.
+Background Color: The footer has a dark blue background (#317082).
+Form inside Footer: The form inside the footer has no margin (margin: 0px), except for a small top margin of 2px. */
+
+#dhtmlgoodies_dragDropContainer{	/* Main container for this script */
+	/* background-image: url('back-image.jpg'); */
+    width:790px;
+    height:770px;
+    border:1px solid #317082;
+    background-color:#FFF;
+    -moz-user-select:none;
+	/* opacity: 0.4;  */
+}
+/* Dimensions: The container has a fixed width of 790px and a height of 770px.
+Border: It has a 1px solid border with the color #317082.
+Background Color: The background is white (#FFF).
+User Select: The -moz-user-select:none ensures that users cannot select text within this element (specific for older Firefox browsers). */
+#dhtmlgoodies_dragDropContainer ul{	
+    margin-top:0px;
+    margin-left:0px;
+    margin-bottom:0px;
+    padding:2px;
+}
+/* Margins: No margin at the top, left, or bottom.
+Padding: Padding is set to 2px. */
+	
+#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{	
+    list-style-type:none;
+    height:15px;
+    background-color:#FFFF99;
+    border:1px solid #000;
+    padding:2px;
+    margin-bottom:2px;
+    cursor:pointer;
+    font-size:13px;
+    line-height:15px;
+}
+/* List Item Style: No bullet points (list-style-type:none).
+Dimensions: The height is 15px, with a font size of 13px.
+Background Color: A light yellow (#FFFF99) is applied.
+Borders: Each list item has a 1px solid black border (border:1px solid #000).
+Padding/Margin: Padding is 2px, and margin-bottom is 2px to create a small gap between list items.
+Cursor: The cursor is set to pointer, which changes it to a hand icon on hover.
+Line Height: The text inside has a line height of 15px to match the height of the list items. */
+
+	li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+		border:1px dotted #600;	
+		background-color:#FFF;
+	}
+		
+	#dhtmlgoodies_dragDropContainer ul li.correctAnswer{	
+		background-color:green;
+		color:#FFF;
+	}
+	#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{
+		background-color:red;
+		color:#FFF;
+	}
+	/* Correct Answer: When a list item is marked as a correct answer, it changes to a green background with white text.
+	Wrong Answer: Incorrect answers are highlighted in red with white text.	 */
+	
+	
+	/* LEFT COLUMN CSS */
+	div#dhtmlgoodies_listOfItems{	/* Left column "Available students" */
+		
+		float:left;
+		padding-left:10px;
+		padding-right:10px;
+		
+		/* CSS HACK */
+		width: 180px;	/* IE 5.x */
+		width/* */:/**/160px;	/* Other browsers */
+		width: /**/160px;
+				
+	}
+	#dhtmlgoodies_listOfItems ul{	/* Left(Sources) column <ul> */
+		height:560px;	
+
+	}
+		
+	div#dhtmlgoodies_listOfItems div{
+		border:1px solid #999;		
+	}
+	div#dhtmlgoodies_listOfItems div ul{	/* Left column <ul> */
+		margin-left:10px;	/* Space at the left of list - the arrow will be positioned there */
+	}
+	#dhtmlgoodies_listOfItems div p{	/* Heading above left column */
+		margin:0px;	
+		font-weight:bold;
+		padding-left:12px;
+		background-color:#317082;	
+		color:#FFF;
+		margin-bottom:5px;
+	}
+	/* END LEFT COLUMN CSS */
+	
+	#dhtmlgoodies_dragDropContainer .mouseover{	/* Mouse over effect DIV box in right column */
+		background-color:#E2EBED;
+		border:1px solid #317082;
+	}
+	
+	/* Start main container CSS */
+	
+	div#dhtmlgoodies_mainContainer{	/* Right column DIV */
+		width:590px;
+		float:left;	
+	}
+	#dhtmlgoodies_mainContainer div{	/* Parent <div> of small boxes */
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+		margin-top:0px;
+		border:1px solid #999;
+
+		/* CSS HACK */
+		width: 172px;	/* IE 5.x */
+		width/* */:/**/170px;	/* Other browsers */
+		width: /**/170px;
+				
+	}
+	#dhtmlgoodies_mainContainer div ul{
+		margin-left:10px;
+	}
+	
+	#dhtmlgoodies_mainContainer div p{	/* Heading above small boxes */
+		margin:0px;
+		padding:0px;
+		padding-left:12px;
+		font-weight:bold;
+		background-color:#317082;	
+		color:#FFF;	
+		margin-bottom:5px;
+	}
+	
+	#dhtmlgoodies_mainContainer ul{	/* Small box in right column ,i.e <ul> */
+		width:152px;
+		height:80px;	
+		border:0px;	
+		margin-bottom:0px;
+		overflow:hidden;
+		
+	}
+	
+	#dragContent{	/* Drag container */
+		position:absolute;
+		width:150px;
+		height:15px;
+		display:none;
+		margin:0px;
+		padding:0px;
+		z-index:2000;
+		/* background-color: #FFA07A;  Light Salmon background for drag content */
+	}
+	
+	#dragDropIndicator{	/* DIV for the small arrow */
+		position:absolute;
+		width:7px;
+		height:10px;
+		display:none;
+		z-index:1000;
+		margin:0px;
+		padding:0px;
+		background-color: #FFD700;  /* Gold background for the drop indicator */
+	}
+	
+/* #dragContent:
+
+Added background-color: #FFA07A; which gives it a light salmon background color.
+#dragDropIndicator:
+
+Added background-color: #FFD700; which gives it a gold background color. */
+
+/* Behavioral Engagement background image */
+#box1 {
+    background-image: url('behavioral-image.jpg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cognitive Engagement background image */
+#box2 {
+    background-image: url('cognitive-image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Emotional Engagement background image */
+#box3 {
+    background-image: url('emotional-image.jpg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+	.style1 {color: #FF0000}
+
+	
